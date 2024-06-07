@@ -1,8 +1,9 @@
+import ReplyList from "./replyList"; //评论案例
 
 function App() {
   return (
     <div className="App">
-      this is my app
+      <ReplyList />
     </div>
   );
 }
