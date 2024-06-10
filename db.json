@@ -1,0 +1,114 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "user": {
+        "uuid": "1",
+        "avatar": "/assets/images/avatar.png",
+        "name": "哲理源"
+      },
+      "content": "这是一条评论内容",
+      "time": "2024-06-01",
+      "like": 10
+    },
+    {
+      "id": 2,
+      "user": {
+        "uuid": "2",
+        "avatar": "/assets/images/avatar.png",
+        "name": "晓风残月"
+      },
+      "content": "这是一条非常有见地的评论内容",
+      "time": "2024-06-02",
+      "like": 15
+    },
+    {
+      "id": 3,
+      "user": {
+        "uuid": "3",
+        "avatar": "/assets/images/avatar.png",
+        "name": "云中君"
+      },
+      "content": "感谢分享，非常有帮助！",
+      "time": "2024-06-03",
+      "like": 8
+    },
+    {
+      "id": 4,
+      "user": {
+        "uuid": "4",
+        "avatar": "/assets/images/avatar.png",
+        "name": "竹林听雨"
+      },
+      "content": "写得真好，受益匪浅。",
+      "time": "2024-06-04",
+      "like": 12
+    },
+    {
+      "id": 5,
+      "user": {
+        "uuid": "5",
+        "avatar": "/assets/images/avatar.png",
+        "name": "文艺青年"
+      },
+      "content": "这个观点我非常赞同。",
+      "time": "2024-06-05",
+      "like": 20
+    },
+    {
+      "id": 6,
+      "user": {
+        "uuid": "6",
+        "avatar": "/assets/images/avatar.png",
+        "name": "乐观派"
+      },
+      "content": "谢谢你的分享，真的很棒！",
+      "time": "2024-06-06",
+      "like": 5
+    },
+    {
+      "id": 7,
+      "user": {
+        "uuid": "7",
+        "avatar": "/assets/images/avatar.png",
+        "name": "旅行者"
+      },
+      "content": "看了你的评论，我也有了很多新的想法。",
+      "time": "2024-06-07",
+      "like": 7
+    },
+    {
+      "id": 8,
+      "user": {
+        "uuid": "8",
+        "avatar": "/assets/images/avatar.png",
+        "name": "技术宅"
+      },
+      "content": "你的评论帮助我解决了一个困惑已久的问题。",
+      "time": "2024-06-08",
+      "like": 18
+    },
+    {
+      "id": 9,
+      "user": {
+        "uuid": "9",
+        "avatar": "/assets/images/avatar.png",
+        "name": "思考者"
+      },
+      "content": "你的观点很有启发性。",
+      "time": "2024-06-09",
+      "like": 13
+    },
+    {
+      "id": 10,
+      "user": {
+        "uuid": "10",
+        "avatar": "/assets/images/avatar.png",
+        "name": "冒险家"
+      },
+      "content": "我完全同意你的看法。",
+      "time": "2024-06-10",
+      "like": 22
+    }
+  ]
+}

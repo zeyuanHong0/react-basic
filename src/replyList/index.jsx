@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { formatDate } from "../utils";
 import { message } from "antd";
 import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
 
 const user = {
   uuid: "1",
@@ -123,9 +124,26 @@ const userReplyList = [
   },
 ];
 
+const useList = () => {
+  const [replyList, setReplyList] = useState([]);
+  useEffect(() => {
+    fetchGetList();
+  }, []);
+
+  const fetchGetList = async () => {
+    const res = await axios.get("http://localhost:8000/list");
+    setReplyList(res.data);
+  };
+
+  return {
+    replyList,
+    setReplyList,
+  };
+};
+
 const ReplyList = () => {
-  const [replyList, setReplyList] = useState(userReplyList);
   const [activeTab, setActiveTab] = useState("");
+  const { replyList, setReplyList } = useList();
 
   const Header = () => {
     // 根据时间来排序 格式 2023-05-12 2023-12-23，最新的时间在前面
@@ -210,6 +228,28 @@ const ReplyList = () => {
     );
   };
 
+  // 评论项封装
+  const Item = ({ item, onDelete }) => {
+    return (
+      <div className="list" key={item.id}>
+        <div className="user">
+          <img src={item.user.avatar} alt="" />
+          <span>{item.user.name}</span>
+        </div>
+        <div className="content">
+          <p>{item.content}</p>
+        </div>
+        <div className="info">
+          <span>{item.time}</span>
+          <span>点赞数：{item.like}</span>
+          {item.user.name === "哲理源" && (
+            <span onClick={() => onDelete(item.id)}>删除</span>
+          )}
+        </div>
+      </div>
+    );
+  };
+
   const List = () => {
     // 删除评论
     const handleDelete = (id) => {
@@ -218,22 +258,7 @@ const ReplyList = () => {
     return (
       <div>
         {replyList.map((item) => (
-          <div className="list" key={item.id}>
-            <div className="user">
-              <img src={item.user.avatar} alt="" />
-              <span>{item.user.name}</span>
-            </div>
-            <div className="content">
-              <p>{item.content}</p>
-            </div>
-            <div className="info">
-              <span>{item.time}</span>
-              <span>点赞数：{item.like}</span>
-              {item.user.name === "哲理源" && (
-                <span onClick={() => handleDelete(item.id)}>删除</span>
-              )}
-            </div>
-          </div>
+          <Item item={item} key={item.id} onDelete={handleDelete} />
         ))}
       </div>
     );
