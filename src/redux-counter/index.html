@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/redux@4.1.2/dist/redux.min.js"></script>
+</head>
+
+<body>
+    <button id="decrement">-</button>
+    <span id="count">0</span>
+    <button id="increment">+</button>
+
+    <script>
+        const btn1 = document.querySelector('#decrement');
+        const btn2 = document.querySelector('#increment');
+        const span = document.querySelector('#count');
+
+        const initState = {
+            count: 0
+        }
+
+        const counterReducer = (state = initState, action) => {
+            if (action.type === 'INCREMENT') {
+                return {
+                    count: state.count + 1
+                }
+            } else if (action.type === 'DECREMENT') {
+                return {
+                    count: state.count - 1
+                }
+            } else {
+                return state
+            }
+        }
+        // 创建store
+        const store = window.Redux.createStore(counterReducer);
+
+        store.subscribe(() => {
+            // console.log(store.getState());
+            span.innerText = store.getState().count
+        })
+
+        // 加
+        btn2.addEventListener('click', () => {
+            store.dispatch({ type: 'INCREMENT' })
+        })
+
+        // 减
+        btn1.addEventListener('click', () => {
+            store.dispatch({ type: 'DECREMENT' })
+        })
+    </script>
+</body>
+
+</html>
