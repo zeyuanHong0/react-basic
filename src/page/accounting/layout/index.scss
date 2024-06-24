@@ -1,0 +1,18 @@
+.page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .content-wrap {
+        width: 100%;
+        flex: 1;
+    }
+
+    .bottom {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        border-top: solid 1px var(--adm-color-border);
+    }
+}
