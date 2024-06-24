@@ -2,7 +2,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import { fetchBillList } from "@/store/modules/billStore";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Badge, TabBar } from "antd-mobile";
+import { TabBar } from "antd-mobile";
 import {
   BillOutline,
   AddCircleOutline,
