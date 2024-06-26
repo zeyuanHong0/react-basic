@@ -1,7 +1,37 @@
 import { NavBar, DatePicker } from "antd-mobile";
 import "./index.scss";
+import { useEffect, useState } from "react";
+import classNames from "classnames";
+
+const useYearMonth = () => {
+  const [date, setDate] = useState({ year: "", month: "" });
+  useEffect(() => {
+    const current = new Date();
+    setDate({
+      year: current.getFullYear(),
+      month: current.getMonth() + 1,
+    });
+  }, []);
+  return {
+    date,
+    setDate,
+  };
+};
 
 const Month = () => {
+  const { date, setDate } = useYearMonth();
+  const [showDatePicker, setShowDatePicker] = useState(false);
+  const handleShowDatePicker = () => {
+    setShowDatePicker(true);
+  };
+  const handleConfirmDate = (val) => {
+    const selectedDate = new Date(val);
+    setDate({
+      year: selectedDate.getFullYear(),
+      month: selectedDate.getMonth() + 1,
+    });
+    setShowDatePicker(false);
+  };
   return (
     <div className="monthlyBill">
       <NavBar className="nav" backArrow={false}>
@@ -11,8 +41,13 @@ const Month = () => {
         <div className="header">
           {/* 时间切换区域 */}
           <div className="date">
-            <span className="text">2023 | 3月账单</span>
-            <span className="arrow expand"></span>
+            <span className="text">
+              {date.year} | {date.month}月账单
+            </span>
+            <span
+              className={classNames("arrow", { expand: showDatePicker })}
+              onClick={() => handleShowDatePicker()}
+            ></span>
           </div>
           {/* 统计区域 */}
           <div className="twoLineOverview">
@@ -34,8 +69,10 @@ const Month = () => {
             className="kaDate"
             title="记账日期"
             precision="month"
-            visible={false}
+            visible={showDatePicker}
             max={new Date()}
+            onCancel={() => setShowDatePicker(false)}
+            onConfirm={handleConfirmDate}
           />
         </div>
       </div>
