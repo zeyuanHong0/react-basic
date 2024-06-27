@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
 import _ from "lodash";
+import DailyBill from "./components/dayBill";
 
 const useYearMonth = () => {
   const [date, setDate] = useState("");
@@ -115,6 +116,8 @@ const Month = () => {
             onConfirm={handleConfirmDate}
           />
         </div>
+        {/* 日账单 */}
+        <DailyBill />
       </div>
     </div>
   );
