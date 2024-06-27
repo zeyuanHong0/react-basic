@@ -31,154 +31,168 @@
     {
       "type": "pay",
       "money": -56,
-      "date": "2022-10-22T05:37:06.000Z",
+      "date": "2022-10-22 05:37:06",
       "useFor": "drinks",
       "id": 5
     },
     {
       "type": "pay",
       "money": -888,
-      "date": "2022-10-28T08:21:42.135Z",
+      "date": "2022-10-28 08:21:42",
       "useFor": "travel",
       "id": 6
     },
     {
       "type": "income",
       "money": 10000,
-      "date": "2023-03-20T06:45:54.004Z",
+      "date": "2023-03-20 06:45:54",
       "useFor": "salary",
       "id": 7
     },
     {
       "type": "pay",
       "money": -10,
-      "date": "2023-03-22T07:17:12.531Z",
+      "date": "2023-03-22 07:17:12",
       "useFor": "drinks",
       "id": 8
     },
     {
       "type": "pay",
       "money": -20,
-      "date": "2023-03-22T07:51:20.421Z",
+      "date": "2023-03-22 07:51:20",
       "useFor": "dessert",
       "id": 9
     },
     {
       "type": "pay",
       "money": -100,
-      "date": "2023-03-22T09:18:12.898Z",
+      "date": "2023-03-22 09:18:12",
       "useFor": "drinks",
       "id": 17
     },
     {
       "type": "pay",
       "money": -50,
-      "date": "2023-03-23T09:11:23.312Z",
+      "date": "2023-03-23 09:11:23",
       "useFor": "food",
       "id": 18
     },
     {
       "type": "pay",
       "money": -100,
-      "date": "2023-04-04T03:03:15.617Z",
+      "date": "2023-04-04 03:03:15",
       "useFor": "drinks",
       "id": 19
     },
     {
       "type": "pay",
       "money": -100,
-      "date": "2023-04-02T16:00:00.000Z",
+      "date": "2023-04-02 16:00:00",
       "useFor": "food",
       "id": 20
     },
     {
       "type": "income",
       "money": 10000,
-      "date": "2023-02-28T16:00:00.000Z",
+      "date": "2023-02-28 16:00:00",
       "useFor": "salary",
       "id": 21
     },
     {
       "type": "income",
       "money": 1000,
-      "date": "2024-01-13T16:00:00.000Z",
+      "date": "2024-01-13 16:00:00",
       "useFor": "salary",
       "id": 22
     },
     {
       "type": "income",
       "money": 1000,
-      "date": "2024-02-14T16:00:00.000Z",
+      "date": "2024-02-14 16:00:00",
       "useFor": "salary",
       "id": 23
     },
     {
       "type": "income",
       "money": 100,
-      "date": "2024-03-15T16:00:00.000Z",
+      "date": "2024-03-15 16:00:00",
       "useFor": "salary",
       "id": 24
     },
     {
       "type": "income",
       "money": 300,
-      "date": "2024-04-16T16:00:00.000Z",
+      "date": "2024-04-16 16:00:00",
       "useFor": "salary",
       "id": 25
     },
     {
       "type": "income",
       "money": 800,
-      "date": "2024-05-17T16:00:00.000Z",
+      "date": "2024-05-17 16:00:00",
       "useFor": "salary",
       "id": 26
     },
     {
       "type": "income",
       "money": 900,
-      "date": "2024-06-18T16:00:00.000Z",
+      "date": "2024-06-18 16:00:00",
       "useFor": "salary",
       "id": 27
     },
     {
       "type": "pay",
       "money": -1000,
-      "date": "2024-01-13T16:00:00.000Z",
+      "date": "2024-01-13 16:00:00",
       "useFor": "salary",
       "id": 28
     },
     {
       "type": "pay",
       "money": -1000,
-      "date": "2024-02-14T16:00:00.000Z",
+      "date": "2024-02-14 16:00:00",
       "useFor": "salary",
       "id": 29
     },
     {
       "type": "pay",
       "money": -100,
-      "date": "2024-03-15T16:00:00.000Z",
+      "date": "2024-03-15 16:00:00",
       "useFor": "salary",
       "id": 30
     },
     {
       "type": "pay",
       "money": -100,
-      "date": "2024-04-16T16:00:00.000Z",
+      "date": "2024-04-16 16:00:00",
       "useFor": "salary",
       "id": 31
     },
     {
       "type": "pay",
       "money": -100,
-      "date": "2024-05-17T16:00:00.000Z",
+      "date": "2024-05-17 16:00:00",
       "useFor": "salary",
       "id": 32
     },
     {
       "type": "pay",
       "money": -80,
-      "date": "2024-06-18T16:00:00.000Z",
+      "date": "2024-06-18 16:00:00",
+      "useFor": "salary",
+      "id": 33
+    },
+    {
+      "type": "pay",
+      "money": -80,
+      "date": "2024-06-17 16:00:00",
+      "useFor": "salary",
+      "id": 33
+    },
+    {
+      "type": "income",
+      "money": 100,
+      "date": "2024-06-17 16:00:00",
       "useFor": "salary",
       "id": 33
     }

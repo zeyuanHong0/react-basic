@@ -21,7 +21,6 @@ const Month = () => {
   const [currentMonthList, setCurrentMonthList] = useState([]);
 
   const overview = useMemo(() => {
-    console.log("重新计算了");
     // 计算每个月的总支出和总收入
     let pay = 0;
     let income = 0;
@@ -54,6 +53,14 @@ const Month = () => {
       setCurrentMonthList(list);
     }
   }, [billListByMonth]);
+
+  // 选中月份的账单日期分组
+  const billListByDaily = useMemo(() => {
+    console.log(dayjs("2022-10-24 10:36:42").format("YYYY-MM-DD"));
+    return _.groupBy(currentMonthList, (item) =>
+      dayjs(item.date).format("YYYY-MM-DD")
+    );
+  }, [currentMonthList]);
 
   return (
     <div className="monthlyBill">
@@ -97,7 +104,9 @@ const Month = () => {
           />
         </div>
         {/* 日账单 */}
-        <DailyBill />
+        {Object.keys(billListByDaily).map((key) => {
+          return <DailyBill bills={billListByDaily[key]} date={key} />;
+        })}
       </div>
     </div>
   );
