@@ -42,9 +42,9 @@ const Month = () => {
   };
   // 确认日期
   const handleConfirmDate = (val) => {
-    const monthKey = dayjs(val).format("YYYY-MM");
-    setCurrentDate(monthKey);
-    setCurrentMonthList(billListByMonth[monthKey]);
+    const month_key = dayjs(val).format("YYYY-MM");
+    setCurrentDate(month_key);
+    setCurrentMonthList(billListByMonth[month_key]);
   };
 
   useEffect(() => {
