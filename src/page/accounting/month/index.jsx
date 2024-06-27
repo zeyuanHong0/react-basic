@@ -1,16 +1,16 @@
 import { NavBar, DatePicker } from "antd-mobile";
 import "./index.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import classNames from "classnames";
+import { useSelector } from "react-redux";
+import dayjs from "dayjs";
+import _ from "lodash";
 
 const useYearMonth = () => {
-  const [date, setDate] = useState({ year: "", month: "" });
+  const [date, setDate] = useState("");
   useEffect(() => {
     const current = new Date();
-    setDate({
-      year: current.getFullYear(),
-      month: current.getMonth() + 1,
-    });
+    setDate(dayjs(current).format("YYYY-MM"));
   }, []);
   return {
     date,
@@ -21,15 +21,19 @@ const useYearMonth = () => {
 const Month = () => {
   const { date, setDate } = useYearMonth();
   const [showDatePicker, setShowDatePicker] = useState(false);
+  const { billList } = useSelector((state) => state.bill);
+  // 对 billList进行处理
+  const billListByMonth = useMemo(() => {
+    // 按月分组 =>{yyyy-mm:[]}
+    return _.groupBy(billList, (item) => dayjs(item.date).format("YYYY-MM"));
+  }, [billList]);
+  console.log(billListByMonth);
   const handleShowDatePicker = () => {
     setShowDatePicker(true);
   };
   const handleConfirmDate = (val) => {
     const selectedDate = new Date(val);
-    setDate({
-      year: selectedDate.getFullYear(),
-      month: selectedDate.getMonth() + 1,
-    });
+    setDate(dayjs(selectedDate).format("YYYY-MM"));
     setShowDatePicker(false);
   };
   return (
@@ -41,9 +45,7 @@ const Month = () => {
         <div className="header">
           {/* 时间切换区域 */}
           <div className="date">
-            <span className="text">
-              {date.year} | {date.month}月账单
-            </span>
+            <span className="text">{date}月账单</span>
             <span
               className={classNames("arrow", { expand: showDatePicker })}
               onClick={() => handleShowDatePicker()}
