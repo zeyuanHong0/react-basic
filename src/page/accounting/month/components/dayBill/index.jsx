@@ -2,9 +2,26 @@ import classNames from "classnames";
 import "./index.scss";
 import { useMemo } from "react";
 import { billTypeToName } from "@/page/accounting/common";
-import { useState } from "react";
+import { useState, forwardRef, useRef } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+
+const BillList = forwardRef(({ bills }, ref) => (
+  <div ref={ref} className="billList">
+    {bills.map((item) => (
+      <div className="bill" key={item.id}>
+        <div className="detail">
+          <div className="billType">{billTypeToName[item.useFor]}</div>
+        </div>
+        <div className={classNames("money", item.type)}>
+          {item.money.toFixed(2)}
+        </div>
+      </div>
+    ))}
+  </div>
+));
 
 const DailyBill = ({ bills, date }) => {
+  const nodeRef = useRef(null);
   const dayResult = useMemo(() => {
     // 计算每天的总支出和总收入
     let pay = 0;
@@ -50,22 +67,13 @@ const DailyBill = ({ bills, date }) => {
         </div>
       </div>
       {/* 单日列表 */}
-      {showDetail && (
-        <div className="billList">
-          {bills.map((item) => {
-            return (
-              <div className="bill" key={item.id}>
-                <div className="detail">
-                  <div className="billType">{billTypeToName[item.useFor]}</div>
-                </div>
-                <div className={classNames("money", item.type)}>
-                  {item.money.toFixed(2)}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      )}
+      <TransitionGroup>
+        {showDetail && (
+          <CSSTransition nodeRef={nodeRef} timeout={300} classNames="fade">
+            <BillList ref={nodeRef} bills={bills} />
+          </CSSTransition>
+        )}
+      </TransitionGroup>
     </div>
   );
 };
