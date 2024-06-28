@@ -105,7 +105,9 @@ const Month = () => {
         </div>
         {/* 日账单 */}
         {Object.keys(billListByDaily).map((key) => {
-          return <DailyBill bills={billListByDaily[key]} date={key} />;
+          return (
+            <DailyBill bills={billListByDaily[key]} date={key} key={key} />
+          );
         })}
       </div>
     </div>

@@ -144,49 +144,49 @@
       "type": "pay",
       "money": -1000,
       "date": "2024-01-13 16:00:00",
-      "useFor": "salary",
+      "useFor": "drinks",
       "id": 28
     },
     {
       "type": "pay",
       "money": -1000,
       "date": "2024-02-14 16:00:00",
-      "useFor": "salary",
+      "useFor": "food",
       "id": 29
     },
     {
       "type": "pay",
       "money": -100,
       "date": "2024-03-15 16:00:00",
-      "useFor": "salary",
+      "useFor": "food",
       "id": 30
     },
     {
       "type": "pay",
       "money": -100,
       "date": "2024-04-16 16:00:00",
-      "useFor": "salary",
+      "useFor": "food",
       "id": 31
     },
     {
       "type": "pay",
       "money": -100,
       "date": "2024-05-17 16:00:00",
-      "useFor": "salary",
+      "useFor": "food",
       "id": 32
     },
     {
       "type": "pay",
       "money": -80,
       "date": "2024-06-18 16:00:00",
-      "useFor": "salary",
+      "useFor": "food",
       "id": 33
     },
     {
       "type": "pay",
       "money": -80,
       "date": "2024-06-17 16:00:00",
-      "useFor": "salary",
+      "useFor": "food",
       "id": 33
     },
     {
