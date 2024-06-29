@@ -48,7 +48,6 @@ const Month = () => {
 
   useEffect(() => {
     const list = billListByMonth[dayjs().format("YYYY-MM")];
-    console.log(list);
     if (list && list.length > 0) {
       setCurrentMonthList(list);
     }
@@ -56,7 +55,6 @@ const Month = () => {
 
   // 选中月份的账单日期分组
   const billListByDaily = useMemo(() => {
-    console.log(dayjs("2022-10-24 10:36:42").format("YYYY-MM-DD"));
     return _.groupBy(currentMonthList, (item) =>
       dayjs(item.date).format("YYYY-MM-DD")
     );
