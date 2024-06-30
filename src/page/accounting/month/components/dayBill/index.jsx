@@ -4,11 +4,13 @@ import { useMemo } from "react";
 import { billTypeToName } from "@/page/accounting/common";
 import { useState, forwardRef, useRef } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import Icon from "@/page/accounting/components/icon";
 
 const BillList = forwardRef(({ bills }, ref) => (
   <div ref={ref} className="billList">
     {bills.map((item) => (
       <div className="bill" key={item.id}>
+        <Icon type={item.useFor} />
         <div className="detail">
           <div className="billType">{billTypeToName[item.useFor]}</div>
         </div>
