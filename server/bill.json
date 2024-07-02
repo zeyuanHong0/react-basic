@@ -209,6 +209,13 @@
       "money": 52,
       "date": "2024-07-02T13:05:17.537Z",
       "useFor": "financial"
+    },
+    {
+      "id": "44544692-1e6a-41a1-b2e2-deab526756cb",
+      "type": "pay",
+      "money": -12.55,
+      "date": "2024-07-02T13:13:11.664Z",
+      "useFor": "drinks"
     }
   ]
 }

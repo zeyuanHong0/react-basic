@@ -38,6 +38,10 @@ const New = () => {
       id: uuidv4(),
     };
     dispatch(addBillList(bill));
+    Toast.show({
+      icon: "success",
+      content: "记账成功",
+    });
     navigate(-1);
   };
   return (
