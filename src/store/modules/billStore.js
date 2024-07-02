@@ -11,6 +11,10 @@ const billStore = createSlice({
     setBillList(state, action) {
       state.billList = action.payload;
     },
+    // 新建账单
+    addBill(state, action) {
+      state.billList.push(action.payload);
+    },
   },
 });
 
@@ -21,8 +25,15 @@ const fetchBillList = () => {
   };
 };
 
-const { setBillList } = billStore.actions;
+const addBillList = (bill) => {
+  return async (dispatch) => {
+    const { data } = await axios.post("http://localhost:8001/ka", bill);
+    dispatch(addBill(data));
+  };
+};
+
+const { setBillList, addBill } = billStore.actions;
 const billReducer = billStore.reducer;
 
-export { setBillList, fetchBillList };
+export { setBillList, addBill, fetchBillList, addBillList };
 export default billReducer;
