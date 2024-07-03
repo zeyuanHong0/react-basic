@@ -8,6 +8,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useDispatch } from "react-redux";
 import { addBillList } from "@/store/modules/billStore";
+import dayjs from "dayjs";
 
 const New = () => {
   const dispatch = useDispatch();
@@ -15,6 +16,17 @@ const New = () => {
   const [type, setType] = useState("pay");
   const [money, setMoney] = useState(undefined);
   const [useFor, setUseFor] = useState("");
+  const [date, setDate] = useState("今天");
+
+  const [showDatePicker, setShowDatePicker] = useState(false);
+  const handleConfirmDate = (val) => {
+    // 如果是今天
+    if (dayjs(val).format("YYYY-MM-DD") === dayjs().format("YYYY-MM-DD")) {
+      setDate("今天");
+    } else {
+      setDate(dayjs(val).format("YYYY-MM-DD"));
+    }
+  };
 
   // 提交账单
   const handleSubmit = () => {
@@ -33,7 +45,7 @@ const New = () => {
     const bill = {
       type,
       money: type === "pay" ? -money : money,
-      date: new Date(),
+      date: date === "今天" ? dayjs().format("YYYY-MM-DD") : date,
       useFor,
       id: uuidv4(),
     };
@@ -70,13 +82,18 @@ const New = () => {
 
         <div className="kaFormWrapper">
           <div className="kaForm">
-            <div className="date">
+            <div className="date" onClick={() => setShowDatePicker(true)}>
               <Icon type="calendar" className="icon" />
-              <span className="text">{"今天"}</span>
+              <span className="text">{date ? date : "今天"}</span>
               <DatePicker
                 className="kaDate"
                 title="记账日期"
                 max={new Date()}
+                visible={showDatePicker}
+                onClose={() => {
+                  setShowDatePicker(false);
+                }}
+                onConfirm={(val) => handleConfirmDate(val)}
               />
             </div>
             <div className="kaInput">

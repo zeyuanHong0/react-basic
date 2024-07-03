@@ -216,6 +216,55 @@
       "money": -12.55,
       "date": "2024-07-02T13:13:11.664Z",
       "useFor": "drinks"
+    },
+    {
+      "id": "d6df3dd5-8d53-4f92-b2a9-ef83fddc67f9",
+      "type": "pay",
+      "money": -52.36,
+      "date": "2024-07-02",
+      "useFor": "food"
+    },
+    {
+      "id": "0820a4a8-d506-4a00-b7b0-2066907bd33d",
+      "type": "pay",
+      "money": -54.36,
+      "date": "2024-07-02",
+      "useFor": "taxi"
+    },
+    {
+      "id": "500f611d-05fd-4ee6-bab8-6099005ded3c",
+      "type": "pay",
+      "money": -12.5,
+      "date": "2024-07-02",
+      "useFor": "book"
+    },
+    {
+      "id": "36d32821-2cec-4b37-9e6e-57fa7d35dd6c",
+      "type": "pay",
+      "money": -25.36,
+      "date": "2024-07-02",
+      "useFor": "food"
+    },
+    {
+      "id": "a83f17b5-838c-4a28-bce9-4fd88178c8fd",
+      "type": "pay",
+      "money": -8,
+      "date": "2024-07-03",
+      "useFor": "food"
+    },
+    {
+      "id": "6db5d922-10aa-4499-ae27-7083abfc464f",
+      "type": "pay",
+      "money": -52.52,
+      "date": "2024-07-03",
+      "useFor": "promote"
+    },
+    {
+      "id": "8710d48a-1d7e-4f62-8a3c-ff77c307b78e",
+      "type": "pay",
+      "money": -63.58,
+      "date": "2024-07-03",
+      "useFor": "community"
     }
   ]
 }
