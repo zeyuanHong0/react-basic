@@ -28,6 +28,18 @@ const New = () => {
     }
   };
 
+  const handleChangeInput = (value) => {
+    // 只允许输入数字和小数点
+    if (/^\d*\.?\d*$/.test(value)) {
+      // 限制小数点后最多两位
+      const formattedValue =
+        value.indexOf(".") >= 0
+          ? value.slice(0, value.indexOf(".") + 3)
+          : value;
+      setMoney(formattedValue);
+    }
+  };
+
   // 提交账单
   const handleSubmit = () => {
     if (!useFor) {
@@ -102,7 +114,7 @@ const New = () => {
                 placeholder="0.00"
                 type="number"
                 value={money}
-                onChange={(val) => setMoney(Number(val))}
+                onChange={(val) => handleChangeInput(val)}
               />
               <span className="iconYuan">¥</span>
             </div>
