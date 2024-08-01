@@ -1,8 +1,9 @@
 // import ReplyList from "./replyList"; //评论案例
 // import ReactReduxDemo from "./react-redux";
 // import ShoppingCart from "./shopping-cart";
-import { RouterProvider } from "react-router-dom";
-import router from "./router";
+import UseReducerDemo from "./useReducer";
+// import { RouterProvider } from "react-router-dom";
+// import router from "./router";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       {/* <ReplyList /> */}
       {/* <ReactReduxDemo /> */}
       {/* <ShoppingCart /> */}
-      <RouterProvider router={router} />
+      {/* <RouterProvider router={router} /> */}
+      <UseReducerDemo />
     </div>
   );
 }
