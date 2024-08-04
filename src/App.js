@@ -2,7 +2,8 @@
 // import ReactReduxDemo from "./react-redux";
 // import ShoppingCart from "./shopping-cart";
 // import UseReducerDemo from "./useReducer";
-import UseMemoDemo from "./useMemo";
+// import UseMemoDemo from "./useMemo";
+import MemoDemo from "./memo";
 // import { RouterProvider } from "react-router-dom";
 // import router from "./router";
 
@@ -14,7 +15,8 @@ function App() {
       {/* <ShoppingCart /> */}
       {/* <RouterProvider router={router} /> */}
       {/* <UseReducerDemo /> */}
-      <UseMemoDemo />
+      {/* <UseMemoDemo /> */}
+      <MemoDemo />
     </div>
   );
 }
