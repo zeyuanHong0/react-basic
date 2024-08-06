@@ -3,7 +3,8 @@
 // import ShoppingCart from "./shopping-cart";
 // import UseReducerDemo from "./useReducer";
 // import UseMemoDemo from "./useMemo";
-import MemoDemo from "./memo";
+// import MemoDemo from "./memo";
+import UseCallbackDemo from "./useCallback";
 // import { RouterProvider } from "react-router-dom";
 // import router from "./router";
 
@@ -16,7 +17,8 @@ function App() {
       {/* <RouterProvider router={router} /> */}
       {/* <UseReducerDemo /> */}
       {/* <UseMemoDemo /> */}
-      <MemoDemo />
+      {/* <MemoDemo /> */}
+      <UseCallbackDemo />
     </div>
   );
 }
