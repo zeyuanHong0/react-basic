@@ -4,7 +4,8 @@
 // import UseReducerDemo from "./useReducer";
 // import UseMemoDemo from "./useMemo";
 // import MemoDemo from "./memo";
-import UseCallbackDemo from "./useCallback";
+// import UseCallbackDemo from "./useCallback";
+import ForwardRefDemo from "./forwardRef";
 // import { RouterProvider } from "react-router-dom";
 // import router from "./router";
 
@@ -18,7 +19,8 @@ function App() {
       {/* <UseReducerDemo /> */}
       {/* <UseMemoDemo /> */}
       {/* <MemoDemo /> */}
-      <UseCallbackDemo />
+      {/* <UseCallbackDemo /> */}
+      <ForwardRefDemo />
     </div>
   );
 }
