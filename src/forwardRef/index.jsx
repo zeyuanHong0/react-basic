@@ -10,7 +10,7 @@ const Child = forwardRef((props, ref) => {
 const Parent = () => {
   const childRef = useRef();
   const showRef = () => {
-    console.log(childRef.current);
+    // console.log(childRef.current);
     childRef.current.focus();
   };
   return (
