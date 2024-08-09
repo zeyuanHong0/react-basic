@@ -5,7 +5,8 @@
 // import UseMemoDemo from "./useMemo";
 // import MemoDemo from "./memo";
 // import UseCallbackDemo from "./useCallback";
-import ForwardRefDemo from "./forwardRef";
+// import ForwardRefDemo from "./forwardRef";
+import UseImperativeHandleDemo from "./useImperativeHandle";
 // import { RouterProvider } from "react-router-dom";
 // import router from "./router";
 
@@ -20,7 +21,8 @@ function App() {
       {/* <UseMemoDemo /> */}
       {/* <MemoDemo /> */}
       {/* <UseCallbackDemo /> */}
-      <ForwardRefDemo />
+      {/* <ForwardRefDemo /> */}
+      <UseImperativeHandleDemo />
     </div>
   );
 }
