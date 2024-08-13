@@ -12,6 +12,8 @@ const Demo = () => {
       <div>{count}</div>
       <button onClick={increment}>+1</button>
       <button onClick={decrement}>-1</button>
+
+      {/* 列表 */}
       <ul>
         {channelList.map((item) => (
           <li key={item.id}>{item.name}</li>
